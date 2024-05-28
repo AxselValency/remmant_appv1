@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "113619704698",
+    "project_id": "appremant",
+    "storage_bucket": "appremant.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:113619704698:android:9263916030c2325b7bd4c3",
+        "android_client_info": {
+          "package_name": "com.axsel.remmant_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9xGlQOtOJt9lWPGK_yQsaFZFgWzhpz9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

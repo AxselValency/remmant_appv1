@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">remmant_app</string>
+    <string name="Menu_panel">Panel</string>
+    <string name="Menu_cuenta">Cuenta</string>
+
+
+    <string name="Txt_rol">Por Favor identifiquese</string>
+    <string name="Bt_rol_administardor">Administrador</string>
+    <string name="Bt_rol_cliente">Trabajador</string>
+
+
+    <string name="TxtRegistroAdmin">Registro de administrador </string>
+
+    <string name="Et_nombres_admin">Nombres</string>
+    <string name="Et_email_admin">Email</string>
+    <string name="Et_password_admin">Nueva Contraseña</string>
+    <string name="Et_R_password_admin">Repita contraseña</string>
+    <string name="Btn_registrar_admin">Registrarme</string>
+    <string name="Txt_tengo_cuenta">Tengo una Cuenta</string>
+
+    <string name="CerrarSesionAdmin">Cerrar Sesion</string>
+
+
+    <string name="TxtLoginAdmin">Login Administradores</string>
+    <string name="TxtLoginTrabajadores">Login Trabajadores</string>
+    <string name="Btn_login_admin">Ingresar</string>
+
+    <string name="Btn_login_Trabajador">Ingresar</string>
+
+    <string name="Btn_agregar_Trabajador">Agregar Trabajador</string>
+    <string name="Txt_agregar_Trabajador">Agregar Trabajador</string>
+
+    <string name="nro_dni_Trabajador">Número de DNI</string>
+    <string name="nombres">Nombres</string>
+    <string name="primer_apellido">Primer Apellido</string>
+    <string name="segundo_apellido">Segundo Apellido</string>
+    <string name="Et_nacimiento">Fecha de Nacimiento</string>
+    <string name="genero">Género</string>
+    <string name="estado_civil">Estado Civil</string>
+    <string name="estado_profesional">Estado Profesional</string>
+    <string name="correo">Correo</string>
+    <string name="passwordT">Contraseña</string>
+    <string name="crear_cuenta">Crear Cuenta</string>
+
+    <string name="Et_email_trabajador">Email</string>
+    <string name="Et_password_trabajador">Nueva Contraseña</string>
+
+
+    <string name="Titulo_RL_Admin">Titulo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

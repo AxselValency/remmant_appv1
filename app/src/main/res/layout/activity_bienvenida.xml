@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2A2828"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Bienvenida">
+
+    <!-- Imagen de Remmant -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/remantsf"
+        android:layout_marginBottom="30dp" />
+
+    <!-- Texto de bienvenida -->
+
+
+    <!-- Barra de progreso -->
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Imagen de Axsel -->
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logodeaxsel"
+        android:layout_gravity="center"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="100dp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
