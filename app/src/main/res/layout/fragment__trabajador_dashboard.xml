@@ -20,14 +20,14 @@
             android:layout_height="wrap_content">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/Btn_listar_Trabajadores"
+                android:id="@+id/Btn_listar_Noticias"
                 android:text="Noticias Empresa Remmant"
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"/>
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/Listar_trabajador"
+                android:id="@+id/Listar_Noticiasr"
                 android:src="@drawable/ic_listar_trabajadores"
                 android:layout_marginStart="10dp"
                 android:layout_width="wrap_content"

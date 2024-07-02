@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Remmant_app"
         tools:targetApi="31">
         <activity
+            android:name=".Noticia.NoticiasActivity"
+            android:exported="false" />
+        <activity
             android:name=".bot.WatsonChatBotActivity"
             android:exported="false" />
         <activity

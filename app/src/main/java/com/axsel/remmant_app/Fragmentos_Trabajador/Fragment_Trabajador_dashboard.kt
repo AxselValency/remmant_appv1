@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.axsel.remmant_app.Informes.AgregarInformes
 import com.axsel.remmant_app.Informes.Lista_Informes // Importa la actividad Lista_Informes
+import com.axsel.remmant_app.Noticia.NoticiasActivity
 import com.axsel.remmant_app.R
 import com.axsel.remmant_app.bot.WatsonChatBotActivity
 import com.axsel.remmant_app.databinding.FragmentTrabajadorDashboardBinding
@@ -50,6 +51,13 @@ class Fragment_Trabajador_dashboard : Fragment() {
         btnChatBot.setOnClickListener {
             // Navegar a WatsonChatBotActivity para mostrar el bot
             val intent = Intent(mContext, WatsonChatBotActivity::class.java)
+            startActivity(intent)
+        }
+
+        val btnNoticiasEmpresaRemmant = rootView.findViewById<Button>(R.id.Btn_listar_Noticias)
+        btnNoticiasEmpresaRemmant.setOnClickListener {
+            // Navegar a NoticiasActivity
+            val intent = Intent(mContext, NoticiasActivity::class.java)
             startActivity(intent)
         }
 
