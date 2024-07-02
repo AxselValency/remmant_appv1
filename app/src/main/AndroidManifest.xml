@@ -13,13 +13,28 @@
         android:theme="@style/Theme.Remmant_app"
         tools:targetApi="31">
         <activity
-            android:name=".Trabajador.Login_Trabajador"
+            android:name=".Informes.Lista_Informes"
+            android:exported="false" />
+        <activity
+            android:name=".Informes.AgregarInformes"
+            android:exported="false" />
+        <activity
+            android:name=".MainTrabajadorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Administrador.EditarTrabajador"
+            android:exported="false" />
+        <activity
+            android:name=".Administrador.Listar_Trabajadores"
             android:exported="false" />
         <activity
             android:name=".Administrador.AgregarTrabajadores"
             android:exported="false" />
         <activity
             android:name=".Administrador.Login_Admin"
+            android:exported="false" />
+        <activity
+            android:name=".Trabajador.Login_Trabajador"
             android:exported="false" />
         <activity
             android:name=".Administrador.Registrar_Admin"

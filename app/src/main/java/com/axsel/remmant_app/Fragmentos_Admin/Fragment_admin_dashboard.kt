@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.axsel.remmant_app.Administrador.AgregarTrabajadores
+import com.axsel.remmant_app.Administrador.Listar_Trabajadores
 import com.axsel.remmant_app.databinding.FragmentAdminDashboardBinding
 
 class Fragment_admin_dashboard : Fragment() {
@@ -29,13 +30,18 @@ class Fragment_admin_dashboard : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.BtnAgregarTrabajador.setOnClickListener{
 
-            startActivity(Intent(mContext,AgregarTrabajadores::class.java))
+        // Abrir la actividad AgregarTrabajadores cuando se hace clic en el botón correspondiente
+        binding.BtnAgregarTrabajador.setOnClickListener {
+            startActivity(Intent(mContext, AgregarTrabajadores::class.java))
         }
 
-        binding.AgregarTrabajador.setOnClickListener{}
+        // Abrir la actividad Listar_Trabajadores cuando se hace clic en el botón correspondiente
+        binding.BtnListarTrabajadores.setOnClickListener {
+            startActivity(Intent(mContext, Listar_Trabajadores::class.java))
+        }
     }
+
 
 
 

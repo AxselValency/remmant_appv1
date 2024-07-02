@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre del Trabajador: "
+            android:textSize="18sp"
+            android:paddingEnd="8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/solotextocorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo: "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+
+
+        <TextView
+            android:id="@+id/textViewCorreo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo: "
+            android:textSize="14sp"
+            android:paddingEnd="8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/solotextopassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña: "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:id="@+id/textViewPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña: "
+            android:textSize="16sp"
+            android:paddingEnd="8dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/buttonEditar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Editar"
+            android:layout_marginBottom="4dp"/>
+
+        <Button
+            android:id="@+id/buttonEliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar"/>
+    </LinearLayout>
+</LinearLayout>

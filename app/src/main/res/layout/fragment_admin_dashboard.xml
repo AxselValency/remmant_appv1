@@ -1,43 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Fragmentos_Admin.Fragment_admin_dashboard">
 
-
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/Ll_dashboard"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/Btn_agregar_Trabajador"
-            android:text="@string/Btn_agregar_Trabajador"
-            android:layout_weight="1"
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-             android:id="@+id/Agregar_trabajador"
-            android:src="@drawable/ic_trabajador"
-            android:layout_marginStart="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_listar_Trabajadores"
+                android:text="Listar Trabajadores"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/Listar_trabajador"
+                android:src="@drawable/ic_listar_trabajadores"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
 
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
 
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/Btn_agregar_Trabajador"
+                android:text="@string/Btn_agregar_Trabajador"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/Agregar_trabajador"
+                android:src="@drawable/ic_trabajador"
+                android:layout_marginStart="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
 
 </RelativeLayout>

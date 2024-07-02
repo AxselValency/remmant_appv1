@@ -45,10 +45,29 @@
     <string name="Et_email_trabajador">Email</string>
     <string name="Et_password_trabajador">Nueva Contraseña</string>
 
+    <string name="Btn_listado_Trabajadores">Listado de Trabajadores</string>
+
 
     <string name="Titulo_RL_Admin">Titulo</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="tipo_maquina_array">
+        <item>Dobladoras</item>
+        <item>Continuas</item>
+        <item>PAFAS</item>
+        <item>Retorcedoras</item>
+        <item>Coneras</item>
+        <item>Mecheras</item>
+        <item>Maquina</item>
+    </string-array>
+
+    <!-- Array para Mecánico a Cargo -->
+    <string-array name="mecanico_cargo_array">
+        <item>Mecánico 1</item>
+        <item>Mecánico 2</item>
+        <item>Mecánico 3</item>
+    </string-array>
 
 
 </resources>

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Administrador.Agregar_Trabajador">
+    tools:context=".Administrador.AgregarTrabajadores">
 
     <!-- Toolbar -->
     <RelativeLayout
@@ -23,11 +23,11 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:text="@string/Txt_agregar_Trabajador"
-            android:textAllCaps="true"
-            android:layout_centerInParent="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/Txt_agregar_Trabajador"
+            android:textAllCaps="true" />
 
         <View
             android:layout_alignParentBottom="true"
@@ -129,6 +129,7 @@
                 android:paddingTop="16dp"
                 android:paddingBottom="8dp" />
 
+            <!-- Fecha de Nacimiento -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -140,40 +141,66 @@
                     android:hint="@string/Et_nacimiento"
                     android:inputType="date" />
             </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:text="Selecciona Genero"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
 
-
+            <!-- Género -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_genero"
+                <Spinner
+                    android:id="@+id/spinner_genero"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/genero" />
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown" />
             </com.google.android.material.textfield.TextInputLayout>
-
+            <TextView
+                android:text="Selecciona Estado Civil"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <!-- Estado Civil -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_estado_civil"
+                <Spinner
+                    android:id="@+id/spinner_estado_civil"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/estado_civil" />
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <TextView
+                android:text="Selecciona Estado Profesional"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="8dp" />
+            <!-- Estado Profesional -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/et_estado_profesional"
+                <Spinner
+                    android:id="@+id/spinner_estado_profesional"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/estado_profesional" />
+                    android:padding="12dp"
+                    android:spinnerMode="dropdown" />
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <!-- Sección 3: Información de Contacto -->
             <TextView
@@ -198,7 +225,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/passwordT"

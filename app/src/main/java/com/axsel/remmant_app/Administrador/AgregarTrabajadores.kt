@@ -5,7 +5,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputFilter
+import android.widget.ArrayAdapter
 import android.widget.DatePicker
+import android.widget.Spinner
+import android.widget.TextView
 import android.widget.Toast
 import com.axsel.remmant_app.MainActivity
 import com.axsel.remmant_app.R
@@ -40,6 +43,9 @@ class AgregarTrabajadores : AppCompatActivity() {
         binding.nacimiento.setOnClickListener {
             showDatePickerDialog()
         }
+        binding.IbRegresar.setOnClickListener{
+            onBackPressedDispatcher.onBackPressed()
+        }
 
         binding.etDni.filters = arrayOf<InputFilter>(
             InputFilter.LengthFilter(8),
@@ -59,10 +65,33 @@ class AgregarTrabajadores : AppCompatActivity() {
                 Toast.makeText(this, "Por favor, ingrese un DNI válido de 8 dígitos", Toast.LENGTH_SHORT).show()
             }
         }
+        val spinnerGenero: Spinner = findViewById(R.id.spinner_genero)
+        val spinnerEstadoCivil: Spinner = findViewById(R.id.spinner_estado_civil)
+        val spinnerEstadoProfesional: Spinner = findViewById(R.id.spinner_estado_profesional)
+
+        val opcionesGenero = arrayOf("Masculino", "Femenino")
+        val opcionesEstadoCivil = arrayOf("Soltero", "Casado", "Divorciado", "Viudo")
+        val opcionesEstadoProfesional = arrayOf("Estudiante", "Egresado", "Ejerce")
+
+        val adapterGenero = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesGenero)
+        val adapterEstadoCivil = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesEstadoCivil)
+        val adapterEstadoProfesional = ArrayAdapter(this, android.R.layout.simple_spinner_item, opcionesEstadoProfesional)
+
+        adapterGenero.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapterEstadoCivil.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        adapterEstadoProfesional.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        spinnerGenero.adapter = adapterGenero
+        spinnerEstadoCivil.adapter = adapterEstadoCivil
+        spinnerEstadoProfesional.adapter = adapterEstadoProfesional
+
 
         binding.btnCrearCuenta.setOnClickListener {
             guardarDatosTrabajador()
         }
+
+
+
     }
 
     // Método para buscar trabajador por DNI
@@ -131,9 +160,9 @@ class AgregarTrabajadores : AppCompatActivity() {
         val primerApellido = binding.etPrimerApellido.text.toString()
         val segundoApellido = binding.etSegundoApellido.text.toString()
         val fechaNacimiento = binding.nacimiento.text.toString()
-        val genero = binding.etGenero.text.toString()
-        val estadoCivil = binding.etEstadoCivil.text.toString()
-        val estadoProfesional = binding.etEstadoProfesional.text.toString()
+        val genero = binding.spinnerGenero.selectedItem.toString()
+        val estadoCivil = binding.spinnerEstadoCivil.selectedItem.toString()
+        val estadoProfesional = binding.spinnerEstadoProfesional.selectedItem.toString()
         val correo = binding.etCorreo.text.toString()
         val password = binding.passwordT.text.toString()
 
@@ -169,6 +198,7 @@ class AgregarTrabajadores : AppCompatActivity() {
                     trabajadorMap["estadoCivil"] = estadoCivil
                     trabajadorMap["estadoProfesional"] = estadoProfesional
                     trabajadorMap["correo"] = correo
+                    trabajadorMap["password"] = password // Añade la contraseña al mapa
 
                     // Guardar los datos del trabajador en Firebase Realtime Database
                     userId?.let {
@@ -195,5 +225,6 @@ class AgregarTrabajadores : AppCompatActivity() {
                 }
             }
     }
+
 }
 
