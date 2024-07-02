@@ -12,6 +12,7 @@ import android.widget.Toast
 import com.axsel.remmant_app.Informes.AgregarInformes
 import com.axsel.remmant_app.Informes.Lista_Informes // Importa la actividad Lista_Informes
 import com.axsel.remmant_app.R
+import com.axsel.remmant_app.bot.WatsonChatBotActivity
 import com.axsel.remmant_app.databinding.FragmentTrabajadorDashboardBinding
 
 class Fragment_Trabajador_dashboard : Fragment() {
@@ -47,9 +48,11 @@ class Fragment_Trabajador_dashboard : Fragment() {
 
         val btnChatBot = rootView.findViewById<Button>(R.id.Btn_chat_bot)
         btnChatBot.setOnClickListener {
-            // Aquí manejas la lógica para el chatbot si es necesario
-            Toast.makeText(mContext, "Botón Chatbot presionado", Toast.LENGTH_SHORT).show()
+            // Navegar a WatsonChatBotActivity para mostrar el bot
+            val intent = Intent(mContext, WatsonChatBotActivity::class.java)
+            startActivity(intent)
         }
+
 
         return rootView
     }
